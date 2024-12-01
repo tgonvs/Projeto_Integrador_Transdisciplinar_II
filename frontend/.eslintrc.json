@@ -1,0 +1,26 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["eslint-plugin-import-helpers", "unused-imports"],
+  "rules": {
+    "no-console": "error",
+
+    "unused-imports/no-unused-imports": "error",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react$/",
+          "/^next/",
+          "/^@nextui/",
+          "/^@/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  }
+}
