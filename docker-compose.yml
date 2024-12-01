@@ -1,0 +1,46 @@
+services:
+  database:
+    container_name: pit2-database
+    image: postgres:alpine
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+
+  backend:
+    container_name: pit2-backend
+    build:
+      context: ./backend
+      tags:
+        - "nubling/pit2-backend"
+    depends_on:
+      - database
+    restart: always
+    environment:
+      DB_HOST: pit2-database
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      HOST: ${BACKEND_HOST}
+    ports:
+      - "3000:3000"
+
+  frontend:
+    container_name: pit2-frontend
+    build:
+      context: ./frontend
+      tags:
+        - "nubling/pit2-frontend"
+    depends_on:
+      - database
+      - backend
+    restart: always
+    environment:
+      NEXT_PUBLIC_BACKEND_HOST: ${BACKEND_HOST}
+    ports:
+      - "3001:80"

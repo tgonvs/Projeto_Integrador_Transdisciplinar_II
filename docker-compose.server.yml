@@ -1,0 +1,22 @@
+services:
+  backend:
+    container_name: pit2-backend
+    image: nubling/pit2-backend
+    restart: always
+    network_mode: host
+    environment:
+      DB_HOST: localhost
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      HOST: ${BACKEND_HOST}
+
+  frontend:
+    container_name: pit2-frontend
+    image: nubling/pit2-frontend
+    depends_on:
+      - backend
+    restart: always
+    network_mode: host
+    environment:
+      BACKEND_URL: http://localhost:3000
