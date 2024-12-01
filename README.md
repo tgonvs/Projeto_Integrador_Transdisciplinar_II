@@ -2,8 +2,6 @@
 
 Atividade elaborada para a disciplina Projeto Integrador Transdisciplinar em Engenharia de Software II
 
-[![Publish Backend](https://github.com/allan-nubling/pit-II/actions/workflows/backend-docker-image.yml/badge.svg)](https://github.com/allan-nubling/pit-II/actions/workflows/backend-docker-image.yml) [![Publish Frontend](https://github.com/allan-nubling/pit-II/actions/workflows/frontend-docker-image.yml/badge.svg)](https://github.com/allan-nubling/pit-II/actions/workflows/frontend-docker-image.yml)
-
 > Acompanhe o [CHANGELOG](./CHANGELOG.md)
 
 ## Conteúdo
