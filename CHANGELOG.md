@@ -5,14 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2023-12-04
+## [1.0.1] - 2024-12-01
 
 ### Fixed
 
 - [Frontend/Backend] Agora campo complemento não é mais obrigatório
 - [Frontend/Backend] Agora campo bairro aceita menos de 3 letras
 
-## [1.0.0] - 2023-12-04
+## [1.0.0] - 2024-12-01
 
 ### Changed
 
@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Frontend] Pagina de pedidos com listagens simples de todos pedidos realizados pelo cliente
 - [Projeto] Readme com documentação do projeto
 
-## [0.10.0] - 2023-12-03
+## [0.10.0] - 2024-12-01
 
 ### Changed
 
@@ -43,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - [Deployment] Desacoplando banco do docker-compose para mais segurança dos dados
 
-## [0.9.0] - 2023-12-01
+## [0.9.0] - 2024-12-01
 
 ### Changed
 
@@ -59,14 +59,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Frontend] Pagina categorias
 - [Frontend] Pagina cupcakes de uma categoria
 
-## [0.9.0] - 2023-10-14
+## [0.9.0] - 2024-10-14
 
 ### Changed
 
 - [Backend] Versão 0.6.1
 - [Backend] Habilitando CORS
 
-## [0.8.0] - 2023-10-08
+## [0.8.0] - 2024-10-08
 
 ### Added
 
@@ -74,7 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Frontend] Inicialização do projeto utilizando NextJS e NextUI
 - [CI] Criação das pipelines utilizando github action para criação e publicação das imagens utilizando o Docker Hub
 
-## [0.7.0] - 2023-09-25
+## [0.7.0] - 2024-09-25
 
 ### Changed
 
@@ -86,7 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Backend] Endpoint listar pedidos
 - [Backend] Endpoint buscar pedido pelo id
 
-## [0.5.0] - 2023-09-24
+## [0.5.0] - 2024-09-24
 
 ### Changed
 
@@ -99,7 +99,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Backend] Endpoint para listar cupcakes
 - [Backend] Endpoint para listar categorias de cupcakes
 
-## [0.4.0] - 2023-09-24
+## [0.4.0] - 2024-09-24
 
 ### Changed
 
@@ -112,7 +112,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Backend] Endpoint para listar endereços
 - [Backend] Endpoint para atualizar dados de um endereço
 
-## [0.3.0] - 2023-09-23
+## [0.3.0] - 2024-09-23
 
 ### Changed
 
@@ -125,7 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Backend] Endpoint para listar clientes
 - [Backend] Endpoint para atualizar dados de um cliente
 
-## [0.2.0] - 2023-09-23
+## [0.2.0] - 2024-09-23
 
 ### Changed
 
@@ -137,14 +137,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Backend] Endpoint para buscar cliente pelo id
 - [Backend] Timestamps de criação e atualização em todas entidades
 
-## [0.1.0] - 2023-09-20
+## [0.1.0] - 2024-09-20
 
 ### Added
 
 - [Backend] Configurações iniciais com NestJS e Prisma
 - Docker compose com banco de dados e redis
 
-## [0.0.0] - 2023-09-07
+## [0.0.0] - 2024-09-07
 
 ### Added
 
