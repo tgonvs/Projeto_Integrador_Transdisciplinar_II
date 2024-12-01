@@ -1,0 +1,22 @@
+FROM oven/bun:1.0.4-debian AS base
+
+WORKDIR /app
+
+COPY package.json bun.lockb ./
+
+RUN bun install
+
+FROM base AS build
+
+COPY . .
+
+RUN bun run build
+
+FROM base AS final
+
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/public ./public
+
+EXPOSE 3000
+
+CMD ["bun", "run", "start"]
