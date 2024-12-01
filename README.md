@@ -152,8 +152,6 @@ Outro ponto interessante de ver foi a otimização que o NextJS faz nos bundles/
 
 ### Github - Actions - Docker Hub
 
-[![Publish Backend](https://github.com/allan-nubling/pit-II/actions/workflows/backend-docker-image.yml/badge.svg)](https://github.com/allan-nubling/pit-II/actions/workflows/backend-docker-image.yml) [![Publish Frontend](https://github.com/allan-nubling/pit-II/actions/workflows/frontend-docker-image.yml/badge.svg)](https://github.com/allan-nubling/pit-II/actions/workflows/frontend-docker-image.yml)
-
 > [https://hub.docker.com/repository/docker/nubling/pit2-frontend/general](https://hub.docker.com/repository/docker/nubling/pit2-frontend/general) [https://hub.docker.com/repository/docker/nubling/pit2-backend/general](https://hub.docker.com/repository/docker/nubling/pit2-backend/general)
 
 Para armazenar o código decidi utilizar o github porque é uma plataforma bem conhecida e temos o acesso às actions que facilitam o CI/CD do nosso sistema, como essa é uma parte que sempre me cativa muito, mesmo não sendo um requisito explicito do trabalho eu quis criar as pipelines que geram os Builds das imagens e publicam elas no Docker Hub. O projeto como um todo tem uma carência de testes automatizados, hoje nos meus projetos profissionais eu mantenho um coverage de pelo menos 80% do código, mas mesmo com a falta deles e algumas outras ferramentar automatizadas para qualidade de código como o sonar, eu achei interessante construir essa base de integração continua. Agora para o CD, eu queria configurar o Jenkins para realizar os deployments automaticamente mas como estamos utilizando uma VM com recursos bem limitados acabei decidindo deixar essa parte um pouco manual.
