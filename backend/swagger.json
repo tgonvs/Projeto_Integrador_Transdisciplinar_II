@@ -1,0 +1,1648 @@
+{
+	"openapi": "3.0.0",
+	"paths": {
+		"/app/health-check": {
+			"get": {
+				"operationId": "AppController_healthCheck",
+				"summary": "Check if application is healthy",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Application"
+				]
+			}
+		},
+		"/client": {
+			"post": {
+				"operationId": "CreateClientController_handle",
+				"summary": "Client create",
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateClientDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client"
+				]
+			},
+			"get": {
+				"operationId": "ListClientController_handle",
+				"summary": "List clients",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					},
+					{
+						"name": "email",
+						"required": false,
+						"in": "query",
+						"description": "Client mail",
+						"example": "fulano.tal@domain.com",
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"name": "firstName",
+						"required": false,
+						"in": "query",
+						"description": "Client first name",
+						"example": "Fulano",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 64,
+							"type": "string"
+						}
+					},
+					{
+						"name": "lastName",
+						"required": false,
+						"in": "query",
+						"description": "Client last name",
+						"example": "Tal",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 64,
+							"type": "string"
+						}
+					},
+					{
+						"name": "phone",
+						"required": false,
+						"in": "query",
+						"description": "Client phone with area code",
+						"example": "51988777665",
+						"schema": {
+							"minLength": 11,
+							"maxLength": 11,
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListClientResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client"
+				]
+			}
+		},
+		"/client/{clientId}": {
+			"get": {
+				"operationId": "GetClientByIdController_handle",
+				"summary": "Get client by id",
+				"parameters": [
+					{
+						"name": "clientId",
+						"required": true,
+						"in": "path",
+						"description": "client id",
+						"example": 92131231,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client"
+				]
+			},
+			"patch": {
+				"operationId": "UpdateClientController_handle",
+				"summary": "Client update",
+				"parameters": [
+					{
+						"name": "clientId",
+						"required": true,
+						"in": "path",
+						"description": "client id",
+						"example": 92131231,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateClientDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client"
+				]
+			}
+		},
+		"/client/{clientId}/address": {
+			"post": {
+				"operationId": "CreateClientAddressController_handle",
+				"summary": "Create client address",
+				"parameters": [
+					{
+						"name": "clientId",
+						"required": true,
+						"in": "path",
+						"description": "client id",
+						"example": 92131231,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateClientAddressDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientAddressResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client Address"
+				]
+			}
+		},
+		"/client-address/{clientAddressId}": {
+			"get": {
+				"operationId": "GetClientAddressByIdController_handle",
+				"summary": "Get client address by id",
+				"parameters": [
+					{
+						"name": "clientAddressId",
+						"required": true,
+						"in": "path",
+						"description": "Address id",
+						"example": 92131231,
+						"schema": {
+							"minimum": 1,
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientAddressResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client Address"
+				]
+			},
+			"patch": {
+				"operationId": "UpdateClientAddressController_handle",
+				"summary": "Update client address",
+				"parameters": [
+					{
+						"name": "clientAddressId",
+						"required": true,
+						"in": "path",
+						"description": "Address id",
+						"example": 92131231,
+						"schema": {
+							"minimum": 1,
+							"type": "number"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateClientAddressDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ClientAddressResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client Address"
+				]
+			}
+		},
+		"/client-address": {
+			"get": {
+				"operationId": "ListClientAddressController_handle",
+				"summary": "List client address",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					},
+					{
+						"name": "clientId",
+						"required": false,
+						"in": "query",
+						"description": "Client id",
+						"example": 1,
+						"schema": {
+							"type": "number"
+						}
+					},
+					{
+						"name": "address",
+						"required": false,
+						"in": "query",
+						"description": "Address",
+						"example": "Av. Sem Fim",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "neighborhood",
+						"required": false,
+						"in": "query",
+						"description": "Address neighborhood",
+						"example": "Centro",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "city",
+						"required": false,
+						"in": "query",
+						"description": "Address city",
+						"example": "Dois Irmãos",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "state",
+						"required": false,
+						"in": "query",
+						"description": "Address state",
+						"example": "RS",
+						"schema": {
+							"minLength": 2,
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					{
+						"name": "zipcode",
+						"required": false,
+						"in": "query",
+						"description": "Address postal code",
+						"example": "93950000",
+						"schema": {
+							"minLength": 8,
+							"maxLength": 8,
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListClientAddressResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Client Address"
+				]
+			}
+		},
+		"/cupcake/category": {
+			"get": {
+				"operationId": "ListCategoryController_handle",
+				"summary": "List cupcakes categories",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListCategoryResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cupcake"
+				]
+			}
+		},
+		"/cupcake": {
+			"get": {
+				"operationId": "ListCupcakeController_handle",
+				"summary": "List cupcakes",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					},
+					{
+						"name": "categoryId",
+						"required": false,
+						"in": "query",
+						"description": "Category id to filter cupcakes",
+						"example": 1,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListCupcakeResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Cupcake"
+				]
+			}
+		},
+		"/client/{clientId}/order": {
+			"post": {
+				"operationId": "CreateOrderController_handle",
+				"summary": "Create client address",
+				"parameters": [
+					{
+						"name": "clientId",
+						"required": true,
+						"in": "path",
+						"description": "client id",
+						"example": 92131231,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateOrderDTO"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OrderEntity"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Order"
+				]
+			}
+		},
+		"/order/{orderId}": {
+			"get": {
+				"operationId": "GetOrderByIdController_handle",
+				"summary": "Get client address by id",
+				"parameters": [
+					{
+						"name": "orderId",
+						"required": true,
+						"in": "path",
+						"description": "Order id",
+						"example": 123123,
+						"schema": {
+							"minimum": 1,
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/OrderEntity"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Order"
+				]
+			}
+		},
+		"/order": {
+			"get": {
+				"operationId": "ListOrderController_handle",
+				"summary": "List orders",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					},
+					{
+						"name": "clientId",
+						"required": false,
+						"in": "query",
+						"description": "Client id",
+						"example": 1,
+						"schema": {
+							"type": "number"
+						}
+					},
+					{
+						"name": "addressId",
+						"required": false,
+						"in": "query",
+						"description": "Address id of client",
+						"example": 42,
+						"schema": {
+							"type": "number"
+						}
+					},
+					{
+						"name": "storeId",
+						"required": false,
+						"in": "query",
+						"description": "Selected store id",
+						"example": 1234,
+						"schema": {
+							"type": "number"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListOrderResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Order"
+				]
+			}
+		},
+		"/store": {
+			"get": {
+				"operationId": "ListStoreController_handle",
+				"summary": "List cupcakes",
+				"parameters": [
+					{
+						"name": "page",
+						"required": false,
+						"in": "query",
+						"description": "Page number",
+						"example": 1,
+						"schema": {
+							"minimum": 1,
+							"default": 1,
+							"type": "number"
+						}
+					},
+					{
+						"name": "size",
+						"required": false,
+						"in": "query",
+						"description": "Max size of content response, maximum of 50 elements",
+						"example": 25,
+						"schema": {
+							"minimum": 1,
+							"maximum": 50,
+							"default": 25,
+							"type": "number"
+						}
+					},
+					{
+						"name": "name",
+						"required": false,
+						"in": "query",
+						"description": "Store name",
+						"example": "Cupcake Mania",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "address",
+						"required": false,
+						"in": "query",
+						"description": "Store address",
+						"example": "Av. Sem Fim",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "neighborhood",
+						"required": false,
+						"in": "query",
+						"description": "Store address neighborhood",
+						"example": "Centro",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "city",
+						"required": false,
+						"in": "query",
+						"description": "Store address city",
+						"example": "Dois Irmãos",
+						"schema": {
+							"minLength": 3,
+							"maxLength": 255,
+							"type": "string"
+						}
+					},
+					{
+						"name": "state",
+						"required": false,
+						"in": "query",
+						"description": "Store address state",
+						"example": "RS",
+						"schema": {
+							"minLength": 2,
+							"maxLength": 2,
+							"type": "string"
+						}
+					},
+					{
+						"name": "zipcode",
+						"required": false,
+						"in": "query",
+						"description": "Store address postal code",
+						"example": "93950000",
+						"schema": {
+							"minLength": 8,
+							"maxLength": 8,
+							"type": "string"
+						}
+					},
+					{
+						"name": "servedZipcode",
+						"required": false,
+						"in": "query",
+						"description": "Store which serves this postal code",
+						"example": "93950000",
+						"schema": {
+							"minLength": 8,
+							"maxLength": 8,
+							"type": "string"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ListStoreResponseDTO"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Store"
+				]
+			}
+		}
+	},
+	"info": {
+		"title": "Backend PIT",
+		"description": "Backend para ser utilizado no PIT",
+		"version": "0.6.0",
+		"contact": {}
+	},
+	"tags": [],
+	"servers": [
+		{
+			"url": "http://localhost:3000",
+			"description": "development"
+		}
+	],
+	"components": {
+		"schemas": {
+			"CreateClientDTO": {
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string",
+						"description": "Client mail",
+						"example": "fulano.tal@domain.com"
+					},
+					"firstName": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 64,
+						"description": "Client first name",
+						"example": "Fulano"
+					},
+					"lastName": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 64,
+						"description": "Client last name",
+						"example": "Tal"
+					},
+					"phone": {
+						"type": "string",
+						"minLength": 11,
+						"maxLength": 11,
+						"description": "Client phone with area code",
+						"example": "51988777665"
+					}
+				},
+				"required": [
+					"email",
+					"firstName",
+					"lastName",
+					"phone"
+				]
+			},
+			"ClientResponseDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"email": {
+						"type": "string"
+					},
+					"firstName": {
+						"type": "string"
+					},
+					"lastName": {
+						"type": "string"
+					},
+					"phone": {
+						"type": "string"
+					},
+					"favoriteAddressId": {
+						"type": "number"
+					},
+					"createdAt": {
+						"format": "date-time",
+						"type": "string"
+					},
+					"updatedAt": {
+						"format": "date-time",
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"email",
+					"firstName",
+					"lastName",
+					"phone",
+					"favoriteAddressId",
+					"createdAt",
+					"updatedAt"
+				]
+			},
+			"ListClientResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ClientResponseDTO"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			},
+			"UpdateClientDTO": {
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string",
+						"description": "Client mail",
+						"example": "fulano.tal@domain.com"
+					},
+					"firstName": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 64,
+						"description": "Client first name",
+						"example": "Fulano"
+					},
+					"lastName": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 64,
+						"description": "Client last name",
+						"example": "Tal"
+					},
+					"phone": {
+						"type": "string",
+						"minLength": 11,
+						"maxLength": 11,
+						"description": "Client phone with area code",
+						"example": "51988777665"
+					},
+					"favoriteAddressId": {
+						"type": "number",
+						"description": "Client favorite address id",
+						"example": 42
+					}
+				}
+			},
+			"CreateClientAddressDTO": {
+				"type": "object",
+				"properties": {
+					"address": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address",
+						"example": "Av. Sem Fim"
+					},
+					"number": {
+						"type": "number",
+						"description": "Address number",
+						"example": 42
+					},
+					"complement": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address complement",
+						"example": "casa 71"
+					},
+					"neighborhood": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address neighborhood",
+						"example": "Centro"
+					},
+					"city": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address city",
+						"example": "Dois Irmãos"
+					},
+					"state": {
+						"type": "string",
+						"minLength": 2,
+						"maxLength": 2,
+						"description": "Address state",
+						"example": "RS"
+					},
+					"zipcode": {
+						"type": "string",
+						"minLength": 8,
+						"maxLength": 8,
+						"description": "Address postal code",
+						"example": "93950000"
+					},
+					"favorite": {
+						"type": "boolean",
+						"description": "Choose address as favorite from client",
+						"example": true
+					}
+				},
+				"required": [
+					"address",
+					"number",
+					"complement",
+					"neighborhood",
+					"city",
+					"state",
+					"zipcode"
+				]
+			},
+			"ClientAddressResponseDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"clientId": {
+						"type": "number"
+					},
+					"address": {
+						"type": "string"
+					},
+					"number": {
+						"type": "number"
+					},
+					"complement": {
+						"type": "string"
+					},
+					"neighborhood": {
+						"type": "string"
+					},
+					"city": {
+						"type": "string"
+					},
+					"state": {
+						"type": "string"
+					},
+					"zipcode": {
+						"type": "string"
+					},
+					"createdAt": {
+						"format": "date-time",
+						"type": "string"
+					},
+					"updatedAt": {
+						"format": "date-time",
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"clientId",
+					"address",
+					"number",
+					"complement",
+					"neighborhood",
+					"city",
+					"state",
+					"zipcode",
+					"createdAt",
+					"updatedAt"
+				]
+			},
+			"ListClientAddressResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ClientAddressResponseDTO"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			},
+			"UpdateClientAddressDTO": {
+				"type": "object",
+				"properties": {
+					"address": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address",
+						"example": "Av. Sem Fim"
+					},
+					"number": {
+						"type": "number",
+						"description": "Address number",
+						"example": 42
+					},
+					"complement": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address complement",
+						"example": "casa 71"
+					},
+					"neighborhood": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address neighborhood",
+						"example": "Centro"
+					},
+					"city": {
+						"type": "string",
+						"minLength": 3,
+						"maxLength": 255,
+						"description": "Address city",
+						"example": "Dois Irmãos"
+					},
+					"state": {
+						"type": "string",
+						"minLength": 2,
+						"maxLength": 2,
+						"description": "Address state",
+						"example": "RS"
+					},
+					"zipcode": {
+						"type": "string",
+						"minLength": 8,
+						"maxLength": 8,
+						"description": "Address postal code",
+						"example": "93950000"
+					}
+				}
+			},
+			"CategoryResponseDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"name",
+					"description"
+				]
+			},
+			"ListCategoryResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/CategoryResponseDTO"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			},
+			"i": {
+				"type": "object",
+				"properties": {}
+			},
+			"CupcakeResponseDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"ingredients": {
+						"type": "string"
+					},
+					"value": {
+						"$ref": "#/components/schemas/i"
+					},
+					"categories": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/CategoryResponseDTO"
+						}
+					}
+				},
+				"required": [
+					"id",
+					"name",
+					"description",
+					"ingredients",
+					"value",
+					"categories"
+				]
+			},
+			"ListCupcakeResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/CupcakeResponseDTO"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			},
+			"ShoppingBagDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number",
+						"description": "Cupcake id",
+						"example": 42
+					},
+					"quantity": {
+						"type": "number",
+						"minimum": 1,
+						"description": "Quantity of cupcakes",
+						"example": 42
+					}
+				},
+				"required": [
+					"id",
+					"quantity"
+				]
+			},
+			"CreateOrderDTO": {
+				"type": "object",
+				"properties": {
+					"addressId": {
+						"type": "number",
+						"description": "Address id to delivery",
+						"example": 42
+					},
+					"storeId": {
+						"type": "number",
+						"description": "Selected store id",
+						"example": 1234
+					},
+					"shoppingBag": {
+						"description": "Selected cupcakes",
+						"example": [
+							{
+								"id": 1,
+								"quantity": 5
+							},
+							{
+								"id": 2,
+								"quantity": 5
+							},
+							{
+								"id": 1,
+								"quantity": 1
+							}
+						],
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/ShoppingBagDTO"
+						}
+					},
+					"paymentMethod": {
+						"type": "string",
+						"description": "Selected store id",
+						"enum": [
+							"card",
+							"cash",
+							"pix"
+						],
+						"example": "pix"
+					}
+				},
+				"required": [
+					"addressId",
+					"storeId",
+					"shoppingBag",
+					"paymentMethod"
+				]
+			},
+			"OrderCupcakeEntity": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"ingredients": {
+						"type": "string"
+					},
+					"value": {
+						"type": "number"
+					},
+					"quantity": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"id",
+					"name",
+					"description",
+					"ingredients",
+					"value",
+					"quantity"
+				]
+			},
+			"OrderEntity": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"clientId": {
+						"type": "number"
+					},
+					"addressId": {
+						"type": "number"
+					},
+					"storeId": {
+						"type": "number"
+					},
+					"cupcakes": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/OrderCupcakeEntity"
+						}
+					},
+					"value": {
+						"$ref": "#/components/schemas/i"
+					},
+					"paymentMethod": {
+						"type": "string"
+					},
+					"createdAt": {
+						"format": "date-time",
+						"type": "string"
+					},
+					"updatedAt": {
+						"format": "date-time",
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"clientId",
+					"addressId",
+					"storeId",
+					"cupcakes",
+					"value",
+					"paymentMethod",
+					"createdAt",
+					"updatedAt"
+				]
+			},
+			"ListOrderResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/OrderEntity"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			},
+			"StoreResponseDTO": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "number"
+					},
+					"name": {
+						"type": "string"
+					},
+					"address": {
+						"type": "string"
+					},
+					"number": {
+						"type": "number"
+					},
+					"complement": {
+						"type": "string"
+					},
+					"neighborhood": {
+						"type": "string"
+					},
+					"city": {
+						"type": "string"
+					},
+					"state": {
+						"type": "string"
+					},
+					"zipcode": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"name",
+					"address",
+					"number",
+					"complement",
+					"neighborhood",
+					"city",
+					"state",
+					"zipcode"
+				]
+			},
+			"ListStoreResponseDTO": {
+				"type": "object",
+				"properties": {
+					"content": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/StoreResponseDTO"
+						}
+					},
+					"numberOfElements": {
+						"type": "number"
+					},
+					"totalElements": {
+						"type": "number"
+					},
+					"page": {
+						"type": "number"
+					},
+					"totalPages": {
+						"type": "number"
+					},
+					"hasContent": {
+						"type": "boolean"
+					},
+					"nextPage": {
+						"type": "number"
+					},
+					"previousPage": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"content",
+					"numberOfElements",
+					"totalElements",
+					"page",
+					"totalPages",
+					"hasContent"
+				]
+			}
+		}
+	}
+}
