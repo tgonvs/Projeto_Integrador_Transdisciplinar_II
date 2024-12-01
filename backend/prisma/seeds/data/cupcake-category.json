@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Clássicos",
+      "description": "Cupcakes clássicos e atemporais, perfeitos para os amantes de sabores tradicionais.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-1.png"
+    },
+    {
+      "name": "Sabores de Frutas",
+      "description": "Cupcakes frescos e frutados, com uma explosão de sabor de frutas naturais.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-2.png"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Cupcakes indulgentes para os amantes de chocolate, com combinações ricas e intensas.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-3.png"
+    },
+    {
+      "name": "Red Velvet",
+      "description": "Os famosos cupcakes Red Velvet, com sua textura aveludada e sabor único.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-4.png"
+    },
+    {
+      "name": "Especiais",
+      "description": "Cupcakes gourmet exclusivos com ingredientes premium e decorações sofisticadas.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-5.png"
+    },
+    {
+      "name": "Edição Limitada",
+      "description": "Cupcakes sazonais e edições especiais que mudam regularmente, não perca!",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/category-6.png"
+    }
+  ]
+}

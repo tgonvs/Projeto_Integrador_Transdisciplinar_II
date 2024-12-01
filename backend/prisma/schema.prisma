@@ -1,0 +1,95 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id                Int             @id @default(autoincrement())
+  email             String          @unique @db.VarChar(128)
+  firstName         String          @db.VarChar(64)
+  lastName          String          @db.VarChar(64)
+  phone             String          @db.Char(11)
+  favoriteAddressId Int?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  addresses         ClientAddress[]
+  orders            Order[]
+}
+
+model ClientAddress {
+  id           Int      @id @default(autoincrement())
+  client       Client?  @relation(fields: [clientId], references: [id])
+  clientId     Int
+  address      String   @db.VarChar(128)
+  number       Int
+  complement   String?  @db.VarChar(128)
+  neighborhood String   @db.VarChar(128)
+  city         String   @db.VarChar(128)
+  state        String   @db.Char(2)
+  zipcode      String   @db.Char(8)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  orders       Order[]
+}
+
+model Category {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique @db.VarChar(128)
+  description String    @db.VarChar(128)
+  image       String    @db.VarChar(256)
+  cupcakes    Cupcake[] @relation("CupcakeCategory")
+}
+
+model Cupcake {
+  id          Int        @id @default(autoincrement())
+  name        String     @unique @db.VarChar(128)
+  description String     @db.VarChar(256)
+  ingredients String     @db.VarChar(256)
+  image       String     @db.VarChar(256)
+  value       Decimal    @db.Money
+  categories  Category[] @relation("CupcakeCategory")
+}
+
+model Store {
+  id                 Int                  @id @default(autoincrement())
+  name               String               @db.VarChar(128)
+  address            String               @db.VarChar(128)
+  number             Int
+  complement         String?              @db.VarChar(128)
+  neighborhood       String               @db.VarChar(128)
+  city               String               @db.VarChar(128)
+  state              String               @db.Char(2)
+  zipcode            String               @db.Char(8)
+  StoreDeliveryRange StoreDeliveryRange[]
+  Order              Order[]
+}
+
+model StoreDeliveryRange {
+  id      Int    @id @default(autoincrement())
+  store   Store? @relation(fields: [storeId], references: [id])
+  storeId Int
+  initial Int
+  final   Int
+}
+
+model Order {
+  id            Int           @id @default(autoincrement())
+  client        Client        @relation(fields: [clientId], references: [id])
+  clientId      Int
+  address       ClientAddress @relation(fields: [addressId], references: [id])
+  addressId     Int
+  store         Store         @relation(fields: [storeId], references: [id])
+  storeId       Int
+  cupcakes      Json
+  value         Decimal       @db.Money
+  paymentMethod String        @db.VarChar(128)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}

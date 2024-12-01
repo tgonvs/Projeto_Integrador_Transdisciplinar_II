@@ -1,0 +1,212 @@
+{
+  "cupcakes": [
+    {
+      "name": "Cupcake de Chocolate Belga",
+      "categories": ["Clássicos", "Chocolate"],
+      "value": 5.99,
+      "ingredients": [
+        "Chocolate belga",
+        "Ganache de chocolate",
+        "Creme de baunilha",
+        "Raspas de chocolate"
+      ],
+      "description": "Um cupcake decadente de chocolate belga, recheado com ganache de chocolate, coberto com creme de baunilha e generosamente decorado com raspas de chocolate.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-4.png"
+    },
+    {
+      "name": "Cupcake de Morango Fresco",
+      "categories": ["Clássicos", "Sabores de Frutas"],
+      "value": 4.99,
+      "ingredients": ["Baunilha", "Morangos frescos", "Chantilly"],
+      "description": "Um cupcake leve de baunilha recheado com morangos frescos, coberto com chantilly e finalizado com morangos inteiros.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-1.png"
+    },
+    {
+      "name": "Cupcake Red Velvet",
+      "categories": ["Clássicos", "Red Velvet"],
+      "value": 6.49,
+      "ingredients": [
+        "Massa Red Velvet",
+        "Cream cheese",
+        "Decoração de açúcar"
+      ],
+      "description": "O clássico Red Velvet com sua textura aveludada, recheado com cream cheese e decorado com elegantes detalhes de açúcar.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-6.png"
+    },
+    {
+      "name": "Cupcake de Limão Siciliano",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Baunilha", "Limão Siciliano", "Cobertura de limão"],
+      "description": "Um cupcake de baunilha com um toque refrescante de limão Siciliano, coberto com uma deliciosa cobertura de limão.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-3.png"
+    },
+    {
+      "name": "Cupcake de Baunilha com Framboesa",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": [
+        "Baunilha",
+        "Framboesas frescas",
+        "Cobertura de baunilha"
+      ],
+      "description": "Um cupcake de baunilha recheado com framboesas frescas e coberto com uma suave cobertura de baunilha.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-2.png"
+    },
+    {
+      "name": "Cupcake de Caramelo Salgado",
+      "categories": ["Especiais"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de caramelo",
+        "Caramelo salgado",
+        "Cobertura de caramelo"
+      ],
+      "description": "Uma explosão de sabor doce e salgado, com massa de caramelo, recheio de caramelo salgado e cobertura de caramelo.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-5.png"
+    },
+    {
+      "name": "Cupcake de Café Espresso",
+      "categories": ["Especiais", "Chocolate"],
+      "value": 6.99,
+      "ingredients": ["Massa de café", "Ganache de chocolate", "Café expresso"],
+      "description": "Um cupcake para os amantes de café, com massa de café, ganache de chocolate e um toque de café expresso.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-8.png"
+    },
+    {
+      "name": "Cupcake de Amendoim Caramelizado",
+      "categories": ["Especiais"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de amendoim",
+        "Caramelo",
+        "Amendoins caramelizados"
+      ],
+      "description": "Um cupcake rico em sabor, com massa de amendoim, recheio de caramelo e amendoins caramelizados na cobertura.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-7.png"
+    },
+    {
+      "name": "Cupcake de Maçã Canela",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Maçãs frescas", "Canela", "Cobertura de canela"],
+      "description": "A combinação clássica de maçã e canela em um cupcake úmido e delicioso, com cobertura de canela.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-10.png"
+    },
+    {
+      "name": "Cupcake de Coco e Abacaxi",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Coco ralado", "Abacaxi", "Cobertura de coco"],
+      "description": "Um cupcake tropical com coco ralado e pedaços de abacaxi, coberto com uma generosa camada de coco.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-9.png"
+    },
+    {
+      "name": "Cupcake de Pistache",
+      "categories": ["Especiais"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de pistache",
+        "Ganache de chocolate branco",
+        "Pistaches picados"
+      ],
+      "description": "Um cupcake sofisticado com massa de pistache, recheio de ganache de chocolate branco e pistaches picados.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-11.png"
+    },
+    {
+      "name": "Cupcake de Maracujá",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Maracujá fresco", "Cobertura de maracujá"],
+      "description": "Um cupcake com o sabor refrescante e tropical do maracujá, com cobertura de maracujá.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-13.png"
+    },
+    {
+      "name": "Cupcake de Menta com Chocolate",
+      "categories": ["Especiais", "Chocolate"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de chocolate",
+        "Creme de menta",
+        "Raspas de chocolate"
+      ],
+      "description": "Uma combinação perfeita de chocolate e menta em um cupcake indulgente, com creme de menta e raspas de chocolate.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-12.png"
+    },
+    {
+      "name": "Cupcake de Avelã",
+      "categories": ["Especiais"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de avelã",
+        "Ganache de chocolate",
+        "Avelãs inteiras"
+      ],
+      "description": "Um cupcake de avelã com massa rica, ganache de chocolate e avelãs inteiras para uma experiência crocante.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-14.png"
+    },
+    {
+      "name": "Cupcake de Frutas Vermelhas",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": [
+        "Frutas vermelhas frescas",
+        "Cobertura de frutas vermelhas"
+      ],
+      "description": "Um cupcake carregado de frutas vermelhas frescas e coberto com uma deliciosa cobertura de frutas vermelhas.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-16.png"
+    },
+    {
+      "name": "Cupcake de Amora",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Amoras frescas", "Cobertura de amora"],
+      "description": "Um cupcake repleto de amoras frescas, com cobertura de amora que equilibra perfeitamente o sabor.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-18.png"
+    },
+    {
+      "name": "Cupcake de Pêssego e Gengibre",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": ["Pêssegos frescos", "Gengibre", "Cobertura de pêssego"],
+      "description": "Um cupcake com uma fusão de pêssegos frescos e um toque de gengibre, coberto com uma suave cobertura de pêssego.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-15.png"
+    },
+    {
+      "name": "Cupcake de Banana com Chocolate",
+      "categories": ["Sabores de Frutas", "Chocolate"],
+      "value": 6.49,
+      "ingredients": [
+        "Bananas maduras",
+        "Pepitas de chocolate",
+        "Cobertura de chocolate"
+      ],
+      "description": "Um cupcake de banana com pedaços de chocolate, perfeito para os amantes de frutas e chocolate.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-17.png"
+    },
+    {
+      "name": "Cupcake de Lavanda",
+      "categories": ["Especiais"],
+      "value": 6.99,
+      "ingredients": [
+        "Massa de lavanda",
+        "Creme de lavanda",
+        "Flores de lavanda"
+      ],
+      "description": "Um cupcake exclusivo com uma suave essência de lavanda, coberto com creme de lavanda e decorado com flores de lavanda.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-19.png"
+    },
+    {
+      "name": "Cupcake de Abóbora com Nozes",
+      "categories": ["Sabores de Frutas"],
+      "value": 5.49,
+      "ingredients": [
+        "Abóbora fresca",
+        "Nozes picadas",
+        "Cobertura de abóbora"
+      ],
+      "description": "Um cupcake sazonal de abóbora com nozes picadas e uma cobertura cremosa de abóbora.",
+      "image": "https://nubling-dev.s3.amazonaws.com/pit-assets/cupcake-20.png"
+    }
+  ]
+}

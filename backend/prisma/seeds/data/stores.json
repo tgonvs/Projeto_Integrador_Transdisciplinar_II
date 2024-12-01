@@ -1,0 +1,284 @@
+{
+  "stores": [
+    {
+      "name": "Delícias Gourmet de Cupcakes - São Paulo",
+      "address": "Rua dos Cupcakes",
+      "number": 123,
+      "complement": "Sala 101",
+      "neighborhood": "Centro Gourmet",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipcode": "01001000"
+    },
+    {
+      "name": "Cupcakes do Nordeste - Salvador",
+      "address": "Avenida das Delícias",
+      "number": 456,
+      "complement": "Loja 3",
+      "neighborhood": "Praia da Alegria",
+      "city": "Salvador",
+      "state": "BA",
+      "zipcode": "40000000"
+    },
+    {
+      "name": "Cupcakes Cariocas - Rio de Janeiro",
+      "address": "Rua da Confeitaria",
+      "number": 789,
+      "complement": "Andar 2",
+      "neighborhood": "Laranjeiras",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipcode": "20000000"
+    },
+    {
+      "name": "Sabores do Sul - Porto Alegre",
+      "address": "Avenida dos Cupcakes",
+      "number": 321,
+      "complement": "Loja 5",
+      "neighborhood": "Canela Gourmet",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "zipcode": "90000000"
+    },
+    {
+      "name": "Cupcakes Mania - Belo Horizonte",
+      "address": "Rua das Delícias",
+      "number": 654,
+      "complement": "Loja 12",
+      "neighborhood": "Centro Culinário",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "zipcode": "30000000"
+    },
+    {
+      "name": "Cupcakes da Amazônia - Manaus",
+      "address": "Avenida da Gastronomia",
+      "number": 987,
+      "complement": "Sala 20",
+      "neighborhood": "Floresta de Sabores",
+      "city": "Manaus",
+      "state": "AM",
+      "zipcode": "69000000"
+    },
+    {
+      "name": "Sabor do Cerrado - Brasília",
+      "address": "Quadra dos Cupcakes",
+      "number": 111,
+      "complement": "Bloco A",
+      "neighborhood": "Cidade Gourmet",
+      "city": "Brasília",
+      "state": "DF",
+      "zipcode": "70000000"
+    },
+    {
+      "name": "Cupcakes do Pantanal - Cuiabá",
+      "address": "Avenida das Delícias Pantaneiras",
+      "number": 222,
+      "complement": "Loja 8",
+      "neighborhood": "Centro dos Sabores",
+      "city": "Cuiabá",
+      "state": "MT",
+      "zipcode": "78000000"
+    },
+    {
+      "name": "Cupcakes do Norte - Belém",
+      "address": "Rua da Confeitaria Amazônica",
+      "number": 333,
+      "complement": "Sala 15",
+      "neighborhood": "Bairro dos Sabores Tropicais",
+      "city": "Belém",
+      "state": "PA",
+      "zipcode": "66000000"
+    },
+    {
+      "name": "Cupcakes da Ilha - São Luís",
+      "address": "Avenida das Delícias Maranhenses",
+      "number": 456,
+      "complement": "Loja 7",
+      "neighborhood": "Centro das Delícias",
+      "city": "São Luís",
+      "state": "MA",
+      "zipcode": "65000000"
+    },
+    {
+      "name": "Sabor Tropical - Recife",
+      "address": "Rua dos Cupcakes Pernambucanos",
+      "number": 555,
+      "complement": "Loja 10",
+      "neighborhood": "Praia do Sabor",
+      "city": "Recife",
+      "state": "PE",
+      "zipcode": "50000000"
+    },
+    {
+      "name": "Cupcakes da Boa Vista - Boa Vista",
+      "address": "Avenida das Delícias Roraimenses",
+      "number": 789,
+      "complement": "Sala 22",
+      "neighborhood": "Centro das Delícias",
+      "city": "Boa Vista",
+      "state": "RR",
+      "zipcode": "69300000"
+    },
+    {
+      "name": "Cupcakes do Pantanal - Campo Grande",
+      "address": "Rua dos Sabores Pantaneiros",
+      "number": 101,
+      "complement": "Loja 4",
+      "neighborhood": "Centro Gourmet",
+      "city": "Campo Grande",
+      "state": "MS",
+      "zipcode": "79000000"
+    },
+    {
+      "name": "Cupcakes das Praias - Florianópolis",
+      "address": "Avenida da Confeitaria",
+      "number": 111,
+      "complement": "Loja 6",
+      "neighborhood": "Praias Gourmet",
+      "city": "Florianópolis",
+      "state": "SC",
+      "zipcode": "88000000"
+    },
+    {
+      "name": "Cupcakes das Montanhas - Vitória",
+      "address": "Rua das Delícias Capixabas",
+      "number": 222,
+      "complement": "Loja 9",
+      "neighborhood": "Centro das Montanhas",
+      "city": "Vitória",
+      "state": "ES",
+      "zipcode": "29000000"
+    },
+    {
+      "name": "Cupcakes da Planície - Aracaju",
+      "address": "Avenida dos Cupcakes Sergipanos",
+      "number": 333,
+      "complement": "Loja 11",
+      "neighborhood": "Planície dos Sabores",
+      "city": "Aracaju",
+      "state": "SE",
+      "zipcode": "49000000"
+    },
+    {
+      "name": "Cupcakes da Chapada - Palmas",
+      "address": "Rua das Delícias Tocantinenses",
+      "number": 444,
+      "complement": "Loja 13",
+      "neighborhood": "Chapada dos Sabores",
+      "city": "Palmas",
+      "state": "TO",
+      "zipcode": "77000000"
+    },
+    {
+      "name": "Cupcakes do Sertão - João Pessoa",
+      "address": "Avenida da Confeitaria Paraibana",
+      "number": 555,
+      "complement": "Sala 18",
+      "neighborhood": "Sertão dos Sabores",
+      "city": "João Pessoa",
+      "state": "PB",
+      "zipcode": "58000000"
+    },
+    {
+      "name": "Cupcakes do Pampa - Porto Velho",
+      "address": "Rua dos Cupcakes Rondonienses",
+      "number": 666,
+      "complement": "Loja 14",
+      "neighborhood": "Pampa dos Sabores",
+      "city": "Porto Velho",
+      "state": "RO",
+      "zipcode": "76800000"
+    },
+    {
+      "name": "Sabor do Noroeste - Macapá",
+      "address": "Avenida das Delícias Amapaenses",
+      "number": 777,
+      "complement": "Loja 17",
+      "neighborhood": "Noroeste dos Sabores",
+      "city": "Macapá",
+      "state": "AP",
+      "zipcode": "68900000"
+    },
+    {
+      "name": "Cupcakes das Águas - Teresina",
+      "address": "Rua dos Cupcakes Piauienses",
+      "number": 888,
+      "complement": "Sala 19",
+      "neighborhood": "Águas dos Sabores",
+      "city": "Teresina",
+      "state": "PI",
+      "zipcode": "64000000"
+    },
+    {
+      "name": "Cupcakes da Floresta - Rio Branco",
+      "address": "Avenida das Delícias",
+      "number": 101,
+      "complement": "Sala 1",
+      "neighborhood": "Floresta Gourmet",
+      "city": "Rio Branco",
+      "state": "AC",
+      "zipcode": "69900000"
+    },
+    {
+      "name": "Delícias Alagoanas - Maceió",
+      "address": "Rua dos Cupcakes",
+      "number": 123,
+      "complement": "Loja 2",
+      "neighborhood": "Praia dos Sabores",
+      "city": "Maceió",
+      "state": "AL",
+      "zipcode": "57000000"
+    },
+    {
+      "name": "Cupcakes do Ceará - Fortaleza",
+      "address": "Avenida das Delícias Culinárias",
+      "number": 222,
+      "complement": "Loja 3",
+      "neighborhood": "Centro Gourmet",
+      "city": "Fortaleza",
+      "state": "CE",
+      "zipcode": "60000000"
+    },
+    {
+      "name": "Sabor de Goiás - Goiânia",
+      "address": "Rua dos Cupcakes Goianos",
+      "number": 333,
+      "complement": "Sala 4",
+      "neighborhood": "Gourmet Central",
+      "city": "Goiânia",
+      "state": "GO",
+      "zipcode": "74000000"
+    },
+    {
+      "name": "Cupcakes do Paraná - Curitiba",
+      "address": "Avenida das Delícias Paranaenses",
+      "number": 444,
+      "complement": "Loja 5",
+      "neighborhood": "Centro Culinário",
+      "city": "Curitiba",
+      "state": "PR",
+      "zipcode": "80000000"
+    },
+    {
+      "name": "Sabor Goiano - Goiânia",
+      "address": "Rua da Confeitaria Goiana",
+      "number": 555,
+      "complement": "Sala 6",
+      "neighborhood": "Gourmet do Cerrado",
+      "city": "Goiânia",
+      "state": "GO",
+      "zipcode": "74000000"
+    },
+    {
+      "name": "Cupcakes Potiguares - Natal",
+      "address": "Avenida dos Cupcakes Potiguares",
+      "number": 666,
+      "complement": "Loja 7",
+      "neighborhood": "Centro dos Sabores",
+      "city": "Natal",
+      "state": "RN",
+      "zipcode": "59000000"
+    }
+  ]
+}

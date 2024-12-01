@@ -1,0 +1,184 @@
+{
+  "delivery": [
+    {
+      "state": "AC - Acre",
+      "uf": "AC",
+      "initial": 69900000,
+      "final": 69999999
+    },
+    {
+      "state": "AL - Alagoas",
+      "uf": "AL",
+      "initial": 57000000,
+      "final": 57999999
+    },
+    {
+      "state": "AM - Amazonas 1",
+      "uf": "AM",
+      "initial": 69000000,
+      "final": 69299999
+    },
+    {
+      "state": "AM - Amazonas 2",
+      "uf": "AM",
+      "initial": 69400000,
+      "final": 69899999
+    },
+    {
+      "state": "AP - Amapá",
+      "uf": "AP",
+      "initial": 68900000,
+      "final": 68999999
+    },
+    {
+      "state": "BA - Bahia",
+      "uf": "BA",
+      "initial": 40000000,
+      "final": 48999999
+    },
+    {
+      "state": "CE - Ceará",
+      "uf": "CE",
+      "initial": 60000000,
+      "final": 63999999
+    },
+    {
+      "state": "DF - Distrito Federal 1",
+      "uf": "DF",
+      "initial": 70000000,
+      "final": 72799999
+    },
+    {
+      "state": "DF - Distrito Federal 2",
+      "uf": "DF",
+      "initial": 73000000,
+      "final": 73699999
+    },
+    {
+      "state": "ES - Espírito Santo",
+      "uf": "ES",
+      "initial": 29000000,
+      "final": 29999999
+    },
+    {
+      "state": "GO - Goiás 1",
+      "uf": "GO",
+      "initial": 72800000,
+      "final": 72999999
+    },
+    {
+      "state": "GO - Goiás 2",
+      "uf": "GO",
+      "initial": 73700000,
+      "final": 76799999
+    },
+    {
+      "state": "MA - Maranhão",
+      "uf": "MA",
+      "initial": 65000000,
+      "final": 65999999
+    },
+    {
+      "state": "MG - Minas Gerais",
+      "uf": "MG",
+      "initial": 30000000,
+      "final": 39999999
+    },
+    {
+      "state": "MS - Mato Grosso do Sul",
+      "uf": "MS",
+      "initial": 79000000,
+      "final": 79999999
+    },
+    {
+      "state": "MT - Mato Grosso",
+      "uf": "MT",
+      "initial": 78000000,
+      "final": 78899999
+    },
+    {
+      "state": "PA - Pará",
+      "uf": "PA",
+      "initial": 66000000,
+      "final": 68899999
+    },
+    {
+      "state": "PB - Paraíba",
+      "uf": "PB",
+      "initial": 58000000,
+      "final": 58999999
+    },
+    {
+      "state": "PE - Pernambuco",
+      "uf": "PE",
+      "initial": 50000000,
+      "final": 56999999
+    },
+    {
+      "state": "PI - Piauí",
+      "uf": "PI",
+      "initial": 64000000,
+      "final": 64999999
+    },
+    {
+      "state": "PR - Paraná",
+      "uf": "PR",
+      "initial": 80000000,
+      "final": 87999999
+    },
+    {
+      "state": "RJ - Rio de Janeiro",
+      "uf": "RJ",
+      "initial": 20000000,
+      "final": 28999999
+    },
+    {
+      "state": "RN - Rio Grande do Norte",
+      "uf": "RN",
+      "initial": 59000000,
+      "final": 59999999
+    },
+    {
+      "state": "RO - Rondônia",
+      "uf": "RO",
+      "initial": 76800000,
+      "final": 76999999
+    },
+    {
+      "state": "RR - Roraima",
+      "uf": "RR",
+      "initial": 69300000,
+      "final": 69399999
+    },
+    {
+      "state": "RS - Rio Grande do Sul",
+      "uf": "RS",
+      "initial": 90000000,
+      "final": 99999999
+    },
+    {
+      "state": "SC - Santa Catarina",
+      "uf": "SC",
+      "initial": 88000000,
+      "final": 89999999
+    },
+    {
+      "state": "SE - Sergipe",
+      "uf": "SE",
+      "initial": 49000000,
+      "final": 49999999
+    },
+    {
+      "state": "SP - São Paulo",
+      "uf": "SP",
+      "initial": 1000000,
+      "final": 19999999
+    },
+    {
+      "state": "TO - Tocantins",
+      "uf": "TO",
+      "initial": 77000000,
+      "final": 77999999
+    }
+  ]
+}
